@@ -1,0 +1,34 @@
+# .gitignore
+
+# Python compiled files
+__pycache__/
+*.pyc
+
+# Jupyter/Colab artifacts
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data directories: Ignore all content, but DO NOT ignore the .gitkeep file
+# This will make the 'data/raw' folder appear on GitHub as an empty folder (with .gitkeep inside)
+data/raw/*
+!data/raw/.gitkeep
+
+# This will make the 'data/processed' folder appear on GitHub as an empty folder (with .gitkeep inside)
+data/processed/*
+!data/processed/.gitkeep
+
+# Models directory: Ignore all content (especially large model files), but DO NOT ignore the .gitkeep file
+# This will make the 'models' folder appear on GitHub as an empty folder (with .gitkeep inside)
+models/*
+!models/.gitkeep
+
+# Other common ignores
+.env
+venv/
+*.log
+!README.md  # Ensure README.md is not ignored if accidentally matched by other patterns
+
+# Colab-specific files that shouldn't be committed
+.git/
+drive/
+content/
