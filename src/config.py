@@ -2,7 +2,7 @@ import os
 
 class Config:
     # Directories
-    BASE_DIR = "/content/drive/MyDrive/melanoma_dormancy_project" # Must match the path used in Cell 1
+    BASE_DIR = "/content/drive/MyDrive/melanoma_dormancy_project" 
     RAW_DATA_DIR = os.path.join(BASE_DIR, "data", "raw")
     PROCESSED_DATA_DIR = os.path.join(BASE_DIR, "data", "processed")
     MODELS_DIR = os.path.join(BASE_DIR, "models")
