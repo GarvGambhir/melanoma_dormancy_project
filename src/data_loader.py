@@ -25,7 +25,6 @@ class MelanomaDormancyDataset(Dataset):
 
         # Load spatial transcriptomics data (AnnData)
         # For simplicity in prototyping, we'll average gene expression across all cells/spots in a sample.
-        # A more advanced approach would involve extracting features per spatial spot or clustering cells.
         adata = ad.read_h5ad(adata_path)
         # Ensure gene expression is a dense numpy array for mean calculation
         gene_expression_features = torch.tensor(adata.X.mean(axis=0).A.squeeze(), dtype=torch.float32)
